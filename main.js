@@ -11,14 +11,22 @@ function setup(){
 
 function draw(){
     background('#848a87');
+        TextSize(difference);
+        fill('#FFE787');
+        text(Mohit,50,500);
+        
 }
 
 function modelLoaded(){
-    console.log("Model Loaded!");
+    console.log("PoseNet is Initialized!");
 }
 
 function gotPoses(results){
     if(results.length > 0){
         console.log(results);
+        leftWristX = results[0].pose.leftWrist.x;
+        rightWristX = results[0].pose.rightWrist.x;
+        difference = floor(leftWristX - rightWristX);
+
     }
 }
