@@ -9,13 +9,12 @@ function setup(){
     PoseNet.on('pose',gotPoses);
 }
 
-function draw(){
-    background('#848a87');
-        TextSize(difference);
-        fill('#FFE787');
-        text(Mohit,50,500);
-        
-}
+        function draw(){
+            background('#848a87');
+            textSize(difference);
+            fill('#ffe787');
+            text('Mohit',50,500);
+        }
 
 function modelLoaded(){
     console.log("PoseNet is Initialized!");
